@@ -1,0 +1,145 @@
+:root {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary-color: #f3f4f6;
+  --background-color: #ffffff;
+  --surface-color: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --error-color: #ef4444;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+
+  --node-start: #10b981;
+  --node-process: #3b82f6;
+  --node-decision: #f59e0b;
+  --node-end: #ef4444;
+
+  --status-not-started: #ef4444;
+  --status-in-progress: #3b82f6;
+  --status-completed: #10b981;
+
+  --canvas-grid: #f0f0f0;
+  --card-background: #ffffff;
+  --input-background: #ffffff;
+  --hover-background: #e5e7eb;
+  --hover-color: #f3f4f6;
+  --border-hover: #d1d5db;
+}
+
+[data-theme="dark"] {
+  --primary-color: #818cf8;
+  --primary-dark: #6366f1;
+  --secondary-color: #374151;
+  --background-color: #1f2937;
+  --surface-color: #111827;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border-color: #4b5563;
+  --error-color: #f87171;
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+
+  --node-start: #34d399;
+  --node-process: #60a5fa;
+  --node-decision: #fbbf24;
+  --node-end: #f87171;
+
+  --status-not-started: #f87171;
+  --status-in-progress: #60a5fa;
+  --status-completed: #34d399;
+
+  --canvas-grid: #374151;
+  --card-background: #374151;
+  --input-background: #1f2937;
+  --hover-background: #4b5563;
+  --hover-color: #4b5563;
+  --border-hover: #6b7280;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--hover-background);
+}
+
+input, textarea, select {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.card {
+  background: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+input, textarea, select {
+  background-color: var(--input-background);
+  color: var(--text-primary);
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-not-started {
+  background-color: var(--status-not-started);
+}
+
+.status-in-progress {
+  background-color: var(--status-in-progress);
+}
+
+.status-completed {
+  background-color: var(--status-completed);
+}

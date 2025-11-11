@@ -6,9 +6,12 @@ const workflowService = new WorkflowService();
 
 router.get('/', async (req, res) => {
   try {
+    console.log('GET /workflows - User ID:', req.user!.id);
     const workflows = await workflowService.getWorkflows(req.user!.id);
+    console.log('Workflows fetched:', workflows.length);
     res.json(workflows);
   } catch (error) {
+    console.error('Error fetching workflows:', error);
     res.status(500).json({ error: error instanceof Error ? error.message : 'Unknown error' });
   }
 });
